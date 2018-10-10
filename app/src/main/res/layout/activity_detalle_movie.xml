@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.test.moviebd.DetalleMovie">
+
+    <TextView android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titulo"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp" />
+
+    <LinearLayout
+        android:id="@+id/llCaracteristicas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView android:id="@+id/tvAdultos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contenido para adultos"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+
+        <LinearLayout android:id="@+id/llLanzamiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Lanzamiento:"
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/tvLanzamiento"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="2018-01-01" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/llGeneros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Generos:"
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/tvGeneros"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="genero1, genero2" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/llPopularidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Popularidad:"
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/tvPopularidad"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0.2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Votos:"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView android:id="@+id/tvVotos"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="6" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView android:id="@+id/ivPoster"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/llCaracteristicas"
+        app:layout_constraintLeft_toLeftOf="@+id/tvTitulo" />
+
+</android.support.constraint.ConstraintLayout>
